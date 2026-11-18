@@ -56,7 +56,7 @@ export default function Classes() {
               </figure>
             </div>
             <div className="course-notice">
-              <span className="mono">Current fall cohort underway</span>
+              <span className="mono">Fall 2026 cohort completed</span>
               <p>
                 Future registration dates, availability, and locations have not
                 been announced. Contact our team for updates rather than using
@@ -72,8 +72,8 @@ export default function Classes() {
                 <h2 id="timeline-title">Learning by building.</h2>
               </div>
               <p>
-                These dates and topics come from documented completed lessons.
-                Further sessions and attendance will be published once verified.
+                The first documented lessons are listed below. The full fall
+                series recap will follow after session details are checked.
               </p>
             </div>
             <ol className="course-timeline">
@@ -161,8 +161,8 @@ export default function Classes() {
                 <div>
                   <dt>Format</dt>
                   <dd>
-                    Lessons began online; future in-person locations are subject
-                    to confirmation
+                    The fall program included online and in-person lessons;
+                    future locations are not yet confirmed
                   </dd>
                 </div>
               </dl>
@@ -171,17 +171,17 @@ export default function Classes() {
               <details>
                 <summary>Can I register for the next class?</summary>
                 <p>
-                  The current fall cohort is underway. Future registration
+                  The fall 2026 cohort has concluded. Future registration
                   dates, availability, and locations have not been announced.{" "}
                   <a href={CLASS_INQUIRY_URL}>Contact our team for updates</a>.
                 </p>
               </details>
               <details>
-                <summary>What have students learned so far?</summary>
+                <summary>What did students learn in the fall program?</summary>
                 <p>
-                  Our first two online Arduino lessons covered current,
-                  resistance, and LED circuits, followed by Arduino IDE
-                  programming and a blinking-LED project.
+                  The early online lessons introduced current, resistance,
+                  LED circuits, and Arduino IDE programming. Later sessions
+                  included additional hands-on electronics projects.
                 </p>
               </details>
               <details>
