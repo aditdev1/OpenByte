@@ -3,6 +3,7 @@ import { ArrowRight } from "@phosphor-icons/react/dist/ssr/ArrowRight";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr/ArrowUpRight";
 import { DonationTracker } from "./donation-tracker";
 import { ProgramExplorer } from "./program-explorer";
+import { LearningPreview } from "./learning-preview";
 import { RoomRail } from "./room-rail";
 import { Circuitry } from "@phosphor-icons/react/dist/ssr/Circuitry";
 import { HandHeart } from "@phosphor-icons/react/dist/ssr/HandHeart";
@@ -179,6 +180,8 @@ export function HomeSections() {
         </div>
       </section>
 
+      <LearningPreview />
+
       {/* ---------- Progress: navy figures band ---------- */}
       <section id="progress" className={s.figures} aria-labelledby="progress-title" data-grow>
         <div className={s.mapStage}>
@@ -262,7 +265,7 @@ export function HomeSections() {
             <a className={s.btnGhostLight} href="/classes/">Class details</a>
           </div>
           <p className={s.featureFine} data-reveal>
-            The current fall cohort is underway. Future dates have not been announced.
+            Our fall 2026 cohort has wrapped up. Future dates have not been announced.
           </p>
         </div>
         <dl className={s.featureSpec} data-reveal>
@@ -591,6 +594,7 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
             <p className={s.caption}>Programs</p>
             <ul>
               <li><a href={`${homePath}#programs`}>Programs</a></li>
+              <li><a href="/learn/">Explore learning</a></li>
               <li><a href="/classes/">Arduino classes</a></li>
               <li><a href={`${homePath}#progress`}>Progress</a></li>
               <li><a href={`${homePath}#drives`}>Device drives</a></li>
