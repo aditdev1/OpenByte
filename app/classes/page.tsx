@@ -203,6 +203,22 @@ export default function Classes() {
             </div>
           </div>
         </section>
+        <section className={s.moreTopics} aria-labelledby="more-topics-title">
+          <div className={s.moreTopicsInner}>
+            <div>
+              <p className={s.moreTopicsEyebrow}>WHAT ELSE COULD YOU LEARN?</p>
+              <h2 id="more-topics-title">Your next project doesn&apos;t have to be a circuit.</h2>
+              <p>
+                Curious about Python, creative coding, AI, cybersecurity, robotics,
+                or building an app? Explore ideas we&apos;re considering for future workshops.
+              </p>
+            </div>
+            <a className={s.moreTopicsLink} href="/learn/">
+              Explore more learning topics <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p className={s.moreTopicsNote}>Future topics are ideas only, not scheduled classes.</p>
+        </section>
         <section className="section class-contact">
           <div className="shell">
             <h2>
