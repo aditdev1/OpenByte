@@ -186,7 +186,7 @@ export function HomeSections() {
       <section id="progress" className={s.figures} aria-labelledby="progress-title" data-grow>
         <div className={s.mapStage}>
           <div className={s.mapHead}>
-            <p className={s.caption} data-reveal>Progress / October 2026</p>
+            <p className={s.caption} data-reveal>Progress / Fall 2026</p>
             <h2 id="progress-title" className={s.h2} data-split>
               <Split text="Classes, workshops, and donated kits." />
             </h2>
@@ -217,11 +217,11 @@ export function HomeSections() {
         <div className={s.figuresInner}>
           <ul className={s.progressList} data-reveal-group>
             <li data-reveal-item>
-              <span className={s.progressNum} data-count="2">2</span>
-              <h3>Arduino lessons</h3>
+              <span className={s.progressNum} data-count="6">6</span>
+              <h3>Fall Arduino sessions</h3>
               <p>
-                Students explored current, resistance, and LED circuits, then
-                programmed a blinking LED in the Arduino IDE.
+                The fall 2026 program included circuits, Arduino programming,
+                and hands-on electronics projects.
               </p>
             </li>
             <li data-reveal-item>
