@@ -8,6 +8,7 @@ import s from "../app/page.module.css";
 
 const LINKS = [
   { href: "/#programs", label: "Our programs" },
+  { href: "/learn/", label: "Explore learning" },
   { href: "/#team", label: "Our story" },
   { href: "/#contact", label: "Get in touch" },
 ];

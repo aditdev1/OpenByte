@@ -7,10 +7,10 @@ import s from "../app/home.module.css";
 const PROGRAMS = [
   {
     title: "Coding & electronics workshops",
-    body: "From building a first webpage to lighting LEDs with Arduino, our students learn by making things.",
-    tags: "Websites / Arduino / circuits / coding",
-    href: "/classes/",
-    cta: "See the Arduino class",
+    body: "Our workshops have introduced students to Arduino circuits, web basics, and responsible AI. We are exploring more topics for future sessions.",
+    tags: "Arduino / web basics / AI literacy / future ideas",
+    href: "/learn/",
+    cta: "Explore learning topics",
     image: "/media/openbyte-workshops/workshop-arduino-build.webp",
     alt: "Student building an Arduino breadboard circuit at an OpenByte workshop",
   },
