@@ -12,6 +12,7 @@ import styles from "../app/page.module.css";
 
 const navigation = [
   { label: "Our programs", href: "#programs" },
+  { label: "Explore learning", href: "/learn/" },
   { label: "Our story", href: "#team" },
   { label: "Get in touch", href: "#contact" },
 ];
