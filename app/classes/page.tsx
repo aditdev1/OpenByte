@@ -11,7 +11,7 @@ export const viewport: Viewport = { themeColor: "#fafaf8" };
 export const metadata: Metadata = {
   title: "Beginner Arduino & Electronics Classes | OpenByte",
   description:
-    "Hands-on Arduino and electronics for grades 6–9. Explore OpenByte's documented lessons, class details, and parts used. Contact the student team for future availability.",
+    "Explore OpenByte’s beginner Arduino curriculum for grades 6–9, from a first LED circuit to a distance detector, four-note piano, and reaction-time game.",
   alternates: { canonical: "/classes/" },
 };
 
@@ -38,30 +38,37 @@ export default function Classes() {
                   &amp; Electronics.
                 </h1>
                 <p className="class-hero-sub">
-                  Hands-on coding and circuits for students in grades 6–9. No
-                  previous electronics experience is required.
+                  Start with an LED on a breadboard. Then write the code that makes a buzzer play a note, measures the distance to your hand, or times how quickly you press a button.
                 </p>
-                <a className="btn btn-primary" href={CLASS_INQUIRY_URL}>
-                  Ask about upcoming classes <span aria-hidden="true">↗</span>
-                </a>
+                <div className={s.classActions}>
+                  <a className="btn btn-primary" href="#projects">Explore the projects</a>
+                  <a className={s.simpleLink} href={CLASS_INQUIRY_URL}>Ask about the next class</a>
+                </div>
               </div>
-              <figure className="class-hero-figure">
-                <img
-                  src="/media/openbyte-workshops/workshop-arduino-build.webp"
-                  width={640}
-                  height={853}
-                  fetchPriority="high"
-                  alt="Student assembling an Arduino breadboard circuit during an OpenByte workshop"
-                />
+              <figure className={s.workshopPhotos}>
+                <div>
+                  <img src="/media/openbyte-workshops/workshop-mentoring.webp" width={640} height={853} fetchPriority="high" alt="Two students checking their wiring at an OpenByte Arduino workshop" />
+                  <img src="/media/openbyte-workshops/workshop-arduino-build.webp" width={640} height={853} alt="A student assembling a circuit next to an open electronics kit" />
+                </div>
+                <figcaption>At the workbench in OpenByte’s fall Arduino program.</figcaption>
               </figure>
             </div>
             <div className="course-notice">
-              <span className="mono">Current fall cohort underway</span>
-              <p>
-                Future registration dates, availability, and locations have not
-                been announced. Contact our team for updates rather than using
-                an expired form.
-              </p>
+              <span className="mono">Fall 2026 · Grades 6–9</span>
+              <p>17 students registered for the six-session program. New cohort dates will be shared when they’re confirmed.</p>
+            </div>
+          </div>
+        </section>
+        <section id="projects" className="section" aria-labelledby="projects-title">
+          <div className="shell">
+            <div className="section-heading">
+              <h2 id="projects-title">Inside the fall lab guide.</h2>
+              <p>These builds from classes five and six connect the code on a laptop to something you can hear, measure, or play.</p>
+            </div>
+            <div className={s.labs}>
+              <article><p>Class 5 · Distance</p><h3>Measure an echo</h3><p>Move a hand toward an ultrasonic sensor and watch the distance reading change.</p></article>
+              <article><p>Class 5 · Sound</p><h3>Play a four-note piano</h3><p>Wire four buttons to different inputs. Each button tells the buzzer to play a different note.</p></article>
+              <article><p>Class 6 · Timing</p><h3>Test your reaction time</h3><p>Wait for the signal, then press a button to measure your reaction. A second lab turns a button into a buzzer switch.</p></article>
             </div>
           </div>
         </section>
@@ -69,11 +76,10 @@ export default function Classes() {
           <div className="shell">
             <div className="section-heading">
               <div>
-                <h2 id="timeline-title">Learning by building.</h2>
+                <h2 id="timeline-title">The first two lessons.</h2>
               </div>
               <p>
-                These dates and topics come from documented completed lessons.
-                Further sessions and attendance will be published once verified.
+                Our October online sessions started with wiring a circuit, then added a few lines of Arduino code.
               </p>
             </div>
             <ol className="course-timeline">
@@ -90,10 +96,6 @@ export default function Classes() {
                 </li>
               ))}
             </ol>
-            <p className="reconciliation">
-              Exact student attendance and kit handoffs are still being
-              reconciled before we publish totals.
-            </p>
           </div>
         </section>
         <section className="section" aria-labelledby="parts-title">
@@ -104,9 +106,7 @@ export default function Classes() {
                 <br />A first working circuit.
               </h2>
               <p className="body class-intro">
-                These are the parts named in our documented blinking-LED lesson.
-                The fall 2026 fee includes a take-home starter kit; this is not
-                a complete kit inventory.
+                In the blinking-LED lesson, a resistor limits current through the LED. The program switches the Arduino output on and off every half second.
               </p>
               <ul className="parts-list">
                 <li>
@@ -161,8 +161,7 @@ export default function Classes() {
                 <div>
                   <dt>Format</dt>
                   <dd>
-                    Lessons began online; future in-person locations are subject
-                    to confirmation
+                    Online instruction and hands-on starter-kit projects
                   </dd>
                 </div>
               </dl>
@@ -171,17 +170,14 @@ export default function Classes() {
               <details>
                 <summary>Can I register for the next class?</summary>
                 <p>
-                  The current fall cohort is underway. Future registration
-                  dates, availability, and locations have not been announced.{" "}
+                  Dates and locations for the next cohort are still to be announced.{" "}
                   <a href={CLASS_INQUIRY_URL}>Contact our team for updates</a>.
                 </p>
               </details>
               <details>
-                <summary>What have students learned so far?</summary>
+                <summary>What projects are in the curriculum?</summary>
                 <p>
-                  Our first two online Arduino lessons covered current,
-                  resistance, and LED circuits, followed by Arduino IDE
-                  programming and a blinking-LED project.
+                  The curriculum starts with current, resistance, and blinking LEDs. Later lab guides introduce ultrasonic distance readings, a four-note piano, a reaction-time game, and a push-button buzzer.
                 </p>
               </details>
               <details>
@@ -205,17 +201,14 @@ export default function Classes() {
         </section>
         <section className="section class-contact">
           <div className="shell">
-            <h2>
-              We can start with
-              <br />a conversation.
-            </h2>
+            <h2>Bring electronics to your community.</h2>
             <p>
-              Tell us what you&apos;re trying to learn. We&apos;ll point you in
-              the right direction.
+              Ask about hosting a class or help OpenByte put more kits and workshop supplies on the table.
             </p>
-            <a className="btn btn-primary" href={CLASS_INQUIRY_URL}>
-              Email OpenByte <span aria-hidden="true">↗</span>
-            </a>
+            <div className={s.classActions}>
+              <a className="btn btn-primary" href={CLASS_INQUIRY_URL}>Email OpenByte</a>
+              <a className={s.simpleLink} href="/donate/">Support our workshops</a>
+            </div>
           </div>
         </section>
       </main>

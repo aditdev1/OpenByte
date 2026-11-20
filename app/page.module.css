@@ -340,3 +340,10 @@
   .page *, .page *::before, .page *::after { scroll-behavior: auto; animation: none; transition: none; }
   .photograph, .introduction > * { transform: none; }
 }
+
+.heroActions .eventLink {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding: 8px 12px; color: #fff; border-radius: 8px;
+  background: rgb(4 25 30 / 65%); text-decoration: underline; text-underline-offset: 4px;
+}
+.heroActions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }

@@ -112,6 +112,73 @@ function Band({ src, mobileSrc, alt }: { src: string; mobileSrc: string; alt: st
 export function HomeSections() {
   return (
     <>
+      {/* ---------- Progress: navy figures band ---------- */}
+      <section id="progress" className={`${s.figures} ${s.impactBand}`} aria-labelledby="progress-title" data-grow>
+        <div className={s.mapStage}>
+          <div className={s.mapHead}>
+            <p className={s.caption} data-reveal>Fall 2026 · November update</p>
+            <h2 id="progress-title" className={s.h2} data-split>
+              <Split text="Our fall Arduino program." />
+            </h2>
+            <a className={s.textLink} href="/classes/#lesson-circuits" data-reveal>
+              Explore the class <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          </div>
+          <div className={s.mapFrame} aria-hidden="true">
+            <picture>
+              <source media="(max-width: 640px)" srcSet="/media/home/map-m-900.webp" />
+              <img
+                src="/media/home/map-1300.webp"
+                srcSet="/media/home/map-1300.webp 1300w, /media/home/map-2000.webp 2000w"
+                sizes="calc(100vw - 48px)"
+                width={1300}
+                height={500}
+                loading="lazy"
+                decoding="async"
+                alt=""
+              />
+            </picture>
+            <span className={s.mapPin}>
+              <i />
+              <span>Ashburn, Virginia</span>
+            </span>
+          </div>
+        </div>
+        <div className={s.figuresInner}>
+          <ul className={s.progressList} data-reveal-group>
+            <li data-reveal-item>
+              <span className={s.progressNum} data-count="17">17</span>
+              <h3>Student registrations</h3>
+              <p>Students signed up for our fall beginner Arduino and electronics program.</p>
+            </li>
+            <li data-reveal-item>
+              <span className={s.progressNum} data-count="6">6</span>
+              <h3>Lessons in the curriculum</h3>
+              <p>From lighting a first LED to building a reaction-time game with a push button.</p>
+            </li>
+            <li data-reveal-item>
+              <span className={s.progressNum} data-count="3">3</span>
+              <h3>Robotics kits shipped</h3>
+              <p>Adeept shipped ESP32 smart-car kits to support our electronics program.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="hacks" className={s.hacks} aria-labelledby="hacks-title">
+        <div className={s.hacksCopy}>
+          <p className={s.caption}>In planning · January 2027</p>
+          <h2 id="hacks-title" className={s.h2}>OpenByte Hacks</h2>
+          <p className={s.lead}>We’re planning a free, one-day hackathon for students in grades 7–12. The idea is to build a project with a team, then show how it works in a short pitch.</p>
+          <p className={s.hacksStatus}>We’ll share the date, venue, and registration details once school approval is in place.</p>
+          <a className={s.textLink} href="mailto:team@openbyte-np.org?subject=OpenByte%20Hacks%20updates">Ask about OpenByte Hacks <ArrowRight size={18} aria-hidden="true" /></a>
+        </div>
+        <figure className={s.hacksPhoto}>
+          <img src="/media/demo-day-team.webp" width={1800} height={1350} loading="lazy" alt="OpenByte presenters at the podium during a student Demo Day" />
+          <figcaption>Our team presenting at an earlier Demo Day.</figcaption>
+        </figure>
+      </section>
+
       {/* ---------- Why this matters: scroll-lit statement (Stellar) ---------- */}
       <section id="about" className={s.statement} aria-labelledby="statement-title">
         <div className={s.wrap}>
@@ -178,69 +245,6 @@ export function HomeSections() {
         </div>
       </section>
 
-      {/* ---------- Progress: navy figures band ---------- */}
-      <section id="progress" className={s.figures} aria-labelledby="progress-title" data-grow>
-        <div className={s.mapStage}>
-          <div className={s.mapHead}>
-            <p className={s.caption} data-reveal>Progress / October 2026</p>
-            <h2 id="progress-title" className={s.h2} data-split>
-              <Split text="Classes, workshops, and donated kits." />
-            </h2>
-            <a className={s.textLink} href="/classes/#lesson-circuits" data-reveal>
-              View the lessons <ArrowRight size={18} aria-hidden="true" />
-            </a>
-          </div>
-          <div className={s.mapFrame} aria-hidden="true">
-            <picture>
-              <source media="(max-width: 640px)" srcSet="/media/home/map-m-900.webp" />
-              <img
-                src="/media/home/map-1300.webp"
-                srcSet="/media/home/map-1300.webp 1300w, /media/home/map-2000.webp 2000w"
-                sizes="calc(100vw - 48px)"
-                width={1300}
-                height={500}
-                loading="lazy"
-                decoding="async"
-                alt=""
-              />
-            </picture>
-            <span className={s.mapPin}>
-              <i />
-              <span>Ashburn, Virginia</span>
-            </span>
-          </div>
-        </div>
-        <div className={s.figuresInner}>
-          <ul className={s.progressList} data-reveal-group>
-            <li data-reveal-item>
-              <span className={s.progressNum} data-count="2">2</span>
-              <h3>Arduino lessons</h3>
-              <p>
-                Students explored current, resistance, and LED circuits, then
-                programmed a blinking LED in the Arduino IDE.
-              </p>
-            </li>
-            <li data-reveal-item>
-              <span className={s.progressNum} data-count="1">1</span>
-              <h3>Introductory workshop</h3>
-              <p>Our July workshop introduced responsible AI and web development.</p>
-            </li>
-            <li data-reveal-item>
-              <span className={s.progressNum} data-count="3">3</span>
-              <h3>Robotics kits from Adeept</h3>
-              <p>
-                Adeept donated ESP32 smart-car kits to support hands-on robotics
-                and electronics education.
-              </p>
-            </li>
-          </ul>
-          <p className={s.progressNote} data-reveal>
-            Student attendance and kit handoff totals are still being reconciled
-            before we publish them.
-          </p>
-        </div>
-      </section>
-
       {/* ---------- Class feature band (Radiating Hope) ---------- */}
       <section id="arduino" className={s.feature} aria-labelledby="class-title" data-grow>
         <Band src="/media/openbyte-workshops/workshop-mentoring-wide.webp" mobileSrc="/media/openbyte-workshops/workshop-mentoring.webp" alt="OpenByte students working together to build an Arduino circuit" />
@@ -251,8 +255,7 @@ export function HomeSections() {
             <Split text="Beginner Arduino & Electronics." />
           </h2>
           <p className={s.featureLead} data-reveal>
-            Hands-on coding and circuits for students in grades 6–9. No previous
-            electronics experience is required.
+            Start with an LED and a breadboard. Then use code to measure distance, play notes on a buzzer, and time a button press.
           </p>
           <div className={s.actionsCenter} data-reveal>
             <a className={s.btnLight} href={CLASS_INQUIRY_URL}>
@@ -261,13 +264,13 @@ export function HomeSections() {
             <a className={s.btnGhostLight} href="/classes/">Class details</a>
           </div>
           <p className={s.featureFine} data-reveal>
-            The current fall cohort is underway. Future dates have not been announced.
+            Ask us about the next cohort. New dates will be posted here.
           </p>
         </div>
         <dl className={s.featureSpec} data-reveal>
           <div><dt>Who</dt><dd>Grades 6–9</dd></div>
           <div><dt>Fall 2026 fee</dt><dd>$100, including a take-home starter kit</dd></div>
-          <div><dt>Format</dt><dd>Lessons began online; future in-person locations are subject to confirmation</dd></div>
+          <div><dt>Format</dt><dd>Online instruction and hands-on kit projects</dd></div>
         </dl>
       </section>
 
@@ -592,6 +595,7 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
               <li><a href={`${homePath}#programs`}>Programs</a></li>
               <li><a href="/classes/">Arduino classes</a></li>
               <li><a href={`${homePath}#progress`}>Progress</a></li>
+              <li><a href={`${homePath}#hacks`}>OpenByte Hacks</a></li>
               <li><a href={`${homePath}#drives`}>Device drives</a></li>
             </ul>
           </div>

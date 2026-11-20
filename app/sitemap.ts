@@ -6,12 +6,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://openbyte-np.org/donate/", changeFrequency: "weekly", priority: 0.9 },
     {
       url: "https://openbyte-np.org/classes/",
+      lastModified: new Date("2026-11-20"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://openbyte-np.org/",
-      lastModified: new Date("2026-10-26"),
+      lastModified: new Date("2026-11-20"),
       changeFrequency: "weekly",
       priority: 1,
     },
