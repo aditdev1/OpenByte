@@ -21,6 +21,17 @@ function currency(cents: number) {
   });
 }
 
+const percentFormat = new Intl.NumberFormat("en-US", {
+  style: "percent", maximumFractionDigits: 1,
+});
+
+function goalShare(cents: number) {
+  if (cents > 0 && cents * 1000 < GOAL_CENTS) return "<0.1%";
+  const rounded = percentFormat.format(cents / GOAL_CENTS);
+  if (rounded === "100%" && cents < GOAL_CENTS) return ">99.9%";
+  return rounded;
+}
+
 export function GiftBuilder() {
   const campaign = useCampaign();
   const [monthly, setMonthly] = useState(false);
@@ -46,10 +57,13 @@ export function GiftBuilder() {
         <p className={s.total}><strong>{known ? currency(confirmed) : "—"}</strong> <span>of {currency(GOAL_CENTS)}</span></p>
         {known ? (
           <>
-            <div className={s.track} role="meter" aria-label="Confirmed fundraising progress" aria-valuemin={0} aria-valuemax={GOAL_CENTS / 100} aria-valuenow={Math.min(confirmed, GOAL_CENTS) / 100} aria-valuetext={`${currency(confirmed)} confirmed of ${currency(GOAL_CENTS)}`}>
+            <div className={s.track} role="meter" aria-label="Confirmed fundraising progress" aria-valuemin={0} aria-valuemax={GOAL_CENTS / 100} aria-valuenow={Math.min(confirmed, GOAL_CENTS) / 100} aria-valuetext={`${currency(confirmed)} confirmed of ${currency(GOAL_CENTS)}, ${goalShare(confirmed)} funded`}>
               <span style={{ width: `${width}%` }} /><i style={{ width: `${extraWidth}%` }} />
             </div>
-            <div className={s.key}><span>Confirmed gifts</span><span>Your preview</span></div>
+            <div className={s.key}>
+              <span>{goalShare(confirmed)} funded</span>
+              {valid && <span>Your gift · {goalShare(cents)} of goal</span>}
+            </div>
           </>
         ) : <p className={s.small} role="status">{campaign.loading ? "Loading confirmed gifts…" : "Live total unavailable. You can still give securely through HCB."}</p>}
       </div>
@@ -83,8 +97,13 @@ export function GiftBuilder() {
       )}
       <div className={s.preview} aria-live="polite" aria-atomic="true">
         <strong>Gift impact preview</strong>
-        {valid ? <p>{known ? <>Your {monthly ? "first monthly payment" : "gift"} of <b>{currency(cents)}</b> would bring confirmed gifts to <b>{currency(confirmed + cents)}</b>. {remaining > 0 ? `${currency(remaining)} would remain.` : confirmed < GOAL_CENTS ? "That would reach our goal." : "Our campaign has reached its goal."}</> : <>Your {monthly ? "first monthly payment" : "one-time gift"} would contribute <b>{currency(cents)}</b> toward our goal.</>}</p>
-          : <p>Enter a valid amount to preview your gift.</p>}
+        {valid ? (
+          <p>
+            Your {monthly ? "first monthly payment" : "gift"} of <b>{currency(cents)}</b> would cover <b>{goalShare(cents)}</b> of our goal.
+            {known && <> That would bring us to <b>{goalShare(confirmed + cents)} funded</b> ({currency(confirmed + cents)}).
+              {remaining > 0 ? ` ${currency(remaining)} would remain.` : confirmed < GOAL_CENTS ? " That would reach our goal." : ""}</>}
+          </p>
+        ) : <p>Enter a valid amount to preview your gift.</p>}
       </div>
       {valid ? <a href={checkout.href} className={s.checkout}><LockSimple size={18} aria-hidden="true" />Continue to HCB checkout</a>
         : <button type="button" disabled className={s.checkout}>Continue to HCB checkout</button>}
