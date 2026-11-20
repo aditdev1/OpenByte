@@ -51,7 +51,7 @@ export function SiteNav() {
       </nav>
 
       <div className={s.headerActions}>
-        <a className={s.donateLink} href="/#donate">Donate</a>
+        <a className={s.donateLink} href="/donate/">Donate</a>
         <a className={s.deviceButton} href="/#tech-donation">
           Give a device <ArrowUpRight size={17} aria-hidden="true" />
         </a>
@@ -79,7 +79,7 @@ export function SiteNav() {
             {link.label} <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         ))}
-        <a href="/#donate" onClick={close}>Donate to OpenByte</a>
+        <a href="/donate/" onClick={close}>Donate to OpenByte</a>
         <a href="/#tech-donation" onClick={close}>Give a device</a>
       </nav>
     </header>

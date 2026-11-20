@@ -11,7 +11,6 @@ import { Package } from "@phosphor-icons/react/dist/ssr/Package";
 import {
   CLASS_INQUIRY_URL,
   DEVICE_FORM_URL,
-  DONATE_URL,
   POSITIONS_URL,
   TRIBUNE_URL,
   external,
@@ -417,7 +416,7 @@ export function HomeSections() {
               </a>
             </li>
             <li className={s.panelSky} data-reveal-item>
-              <a href="#donate">
+              <a href="/donate/">
                 <span className={s.panelTop}><HandHeart className={s.pictogram} size={56} weight="duotone" aria-hidden="true" /><span>03</span></span>
                 <span className={s.panelBottom}>
                   <strong>Pitch in where you can</strong>
@@ -473,8 +472,8 @@ export function HomeSections() {
               as they learn, and get donated devices ready for their next home.
             </p>
             <div className={s.actions} data-reveal>
-              <a className={s.btnLight} href={DONATE_URL} {...external}>
-                Donate through Hack Club Bank <ArrowUpRight size={18} aria-hidden="true" />
+              <a className={s.btnLight} href="/donate/">
+                Donate to OpenByte <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             </div>
             <p className={s.bandFine} data-reveal>
@@ -582,7 +581,7 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
             Helping kids learn, helping older adults feel confident, and getting
             good devices back into use.
           </p>
-          <a className={s.footerCta} href={DONATE_URL} {...external}>
+          <a className={s.footerCta} href="/donate/">
             Support OpenByte <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
@@ -609,7 +608,7 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
             <p className={s.caption}>Get involved</p>
             <ul>
               <li><a href={`${homePath}#tech-donation`}>Give a device</a></li>
-              <li><a href={`${homePath}#donate`}>Donate</a></li>
+              <li><a href="/donate/">Donate</a></li>
               <li><a href={`${homePath}#apply`}>OpenByte Positions</a></li>
             </ul>
           </div>

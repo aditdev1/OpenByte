@@ -2,24 +2,12 @@
 
 import { useEffect, useId, useState } from "react";
 
-const HCB_SLUG = "openbyte-non-profit";
-const HCB_DONATION_URL =
-  "https://hcb.hackclub.com/donations/start/openbyte-non-profit";
-const GOAL = 5000;
+import { DONATE_URL as HCB_DONATION_URL } from "../lib/site-content";
+import { GOAL_CENTS, type ConfirmedGift } from "../lib/campaign";
+import { useCampaign } from "./use-campaign";
+
 const REFRESH_INTERVAL = 60_000;
-
-type HcbTransaction = {
-  amount_cents?: number;
-  memo?: string;
-  type?: string;
-  tag?: string;
-};
-
-type TrackerState = {
-  donations: HcbTransaction[];
-  loading: boolean;
-  error: string | null;
-};
+const GOAL = GOAL_CENTS / 100;
 
 type PublicDonor = {
   name: string;
@@ -32,45 +20,6 @@ type LeaderboardState = {
   loading: boolean;
   error: string | null;
 };
-
-function isDonation(transaction: HcbTransaction) {
-  const amountCents = transaction.amount_cents ?? 0;
-  const memo = (transaction.memo ?? "").toLowerCase();
-  const type = (transaction.type ?? "").toLowerCase();
-
-  return (
-    amountCents > 0 &&
-    (type === "donation" ||
-      type.includes("donat") ||
-      memo.includes("donat") ||
-      transaction.tag === "donation")
-  );
-}
-
-async function fetchHcbDonations(signal: AbortSignal) {
-  const allTransactions: HcbTransaction[] = [];
-
-  for (let page = 1; page <= 10; page += 1) {
-    const response = await fetch(
-      `https://hcb.hackclub.com/api/v3/organizations/${HCB_SLUG}/transactions?per_page=100&page=${page}`,
-      { signal },
-    );
-
-    if (!response.ok) {
-      throw new Error(`HCB API error: ${response.status}`);
-    }
-
-    const data: unknown = await response.json();
-    const transactions = Array.isArray(data) ? data : [];
-
-    if (transactions.length === 0) break;
-
-    allTransactions.push(...(transactions as HcbTransaction[]));
-    if (transactions.length < 100) break;
-  }
-
-  return allTransactions.filter(isDonation);
-}
 
 function formatCurrency(amount: number) {
   return new Intl.NumberFormat("en-US", {
@@ -157,7 +106,7 @@ function Leaderboard({
   publicDonors,
   publicDonorsError,
 }: {
-  donations: HcbTransaction[];
+  donations: ConfirmedGift[];
   loading: boolean;
   error: string | null;
   publicDonors: PublicDonor[];
@@ -253,60 +202,12 @@ function Leaderboard({
 export function DonationTracker() {
   const tabId = useId();
   const [activeTab, setActiveTab] = useState<"total" | "leaderboard">("total");
-  const [state, setState] = useState<TrackerState>({
-    donations: [],
-    loading: true,
-    error: null,
-  });
+  const state = useCampaign();
   const [leaderboardState, setLeaderboardState] = useState<LeaderboardState>({
     donors: [],
     loading: true,
     error: null,
   });
-
-  useEffect(() => {
-    let mounted = true;
-    let controller = new AbortController();
-
-    const loadDonations = async (initialLoad = false) => {
-      if (initialLoad) {
-        setState((current) => ({ ...current, loading: true, error: null }));
-      }
-
-      try {
-        const donations = await fetchHcbDonations(controller.signal);
-        if (!mounted) return;
-        setState({ donations, loading: false, error: null });
-      } catch (error) {
-        if (
-          !mounted ||
-          (error instanceof DOMException && error.name === "AbortError")
-        ) {
-          return;
-        }
-        console.warn("HCB tracker error:", error);
-        setState((current) => ({
-          ...current,
-          loading: false,
-          error:
-            "Transparency Mode may not be enabled yet. Enable it in HCB settings to show live data.",
-        }));
-      }
-    };
-
-    void loadDonations(true);
-    const interval = window.setInterval(() => {
-      controller.abort();
-      controller = new AbortController();
-      void loadDonations();
-    }, REFRESH_INTERVAL);
-
-    return () => {
-      mounted = false;
-      controller.abort();
-      window.clearInterval(interval);
-    };
-  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -373,11 +274,7 @@ export function DonationTracker() {
     };
   }, []);
 
-  const totalRaised =
-    state.donations.reduce(
-      (sum, donation) => sum + (donation.amount_cents ?? 0),
-      0,
-    ) / 100;
+  const totalRaised = state.totalCents / 100;
   const progress = Math.min(Math.round((totalRaised / GOAL) * 100), 100);
 
   return (
@@ -386,7 +283,7 @@ export function DonationTracker() {
         <span className="tracker-label">Live donation data</span>
         <h2>Community funding</h2>
         <p>
-          Donation totals and largest gifts come from HCB transactions. Public
+          Totals and largest gifts come from confirmed HCB campaign donations. Public
           donor names follow HCB&apos;s recognition settings.
         </p>
       </div>

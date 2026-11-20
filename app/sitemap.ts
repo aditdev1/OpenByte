@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
+    { url: "https://openbyte-np.org/donate/", changeFrequency: "weekly", priority: 0.9 },
     {
       url: "https://openbyte-np.org/classes/",
       changeFrequency: "monthly",

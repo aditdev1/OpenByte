@@ -53,7 +53,7 @@ export function StickyBar() {
           ))}
         </nav>
         <div className={s.barActions}>
-          <a className={s.barGhost} href="#donate">Donate</a>
+          <a className={s.barGhost} href="/donate/">Donate</a>
           <a className={s.barSolid} href="#tech-donation">
             Give a device <ArrowUpRight size={16} aria-hidden="true" />
           </a>

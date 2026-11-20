@@ -85,7 +85,7 @@ export function HomeHero({ children, footer }: { children?: React.ReactNode; foo
           {navigation.map((item) => <a key={item.label} href={item.href}>{item.label}</a>)}
         </nav>
         <div className={styles.headerActions}>
-          <a className={styles.donateLink} href="#donate">Donate</a>
+          <a className={styles.donateLink} href="/donate/">Donate</a>
           <a className={styles.deviceButton} href="#tech-donation">
             Give a device <ArrowUpRight size={17} aria-hidden="true" />
           </a>
@@ -102,7 +102,7 @@ export function HomeHero({ children, footer }: { children?: React.ReactNode; foo
               {item.label} <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           ))}
-          <a href="#donate" onClick={() => setMenuOpen(false)}>Donate to OpenByte</a>
+          <a href="/donate/" onClick={() => setMenuOpen(false)}>Donate to OpenByte</a>
         </nav>
       </header>
       <main id="main-content" tabIndex={-1}>
