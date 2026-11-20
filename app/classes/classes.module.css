@@ -235,3 +235,19 @@
   .content :global(.code-footnote) { padding: 16px 20px; }
   .content :global(.btn) { gap: 8px; padding-inline: 14px; font-size: 13px; }
 }
+
+.workshopPhotos { min-width: 0; margin: 0; }
+.workshopPhotos > div { display: grid; grid-template-columns: 1.2fr .8fr; gap: 8px; overflow: hidden; border-radius: 16px; }
+.workshopPhotos img { width: 100%; height: clamp(240px, 30vw, 420px); object-fit: cover; }
+.workshopPhotos figcaption { margin-top: 8px; color: var(--fg-3); font-size: .875rem; }
+.classActions { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; }
+.simpleLink { display: inline-flex; align-items: center; min-height: 44px; color: var(--link); text-decoration: underline; text-underline-offset: 4px; }
+.labs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+.labs article { padding: clamp(20px,2.4vw,36px); background: #e9f3f4; border-radius: 12px; }
+.labs article p:first-child { color: #315762; font-size: .875rem; font-weight: 600; margin: 0 0 18px; }
+.labs article h3 { margin: 0 0 12px; font-size: clamp(23px,2vw,32px); line-height: 1.1; }
+.labs article p:last-child { margin: 0; color: var(--fg-2); line-height: 1.55; }
+@media (max-width: 720px) {
+  .labs { grid-template-columns: 1fr; }
+  .workshopPhotos img { height: clamp(190px,52vw,300px); }
+}
