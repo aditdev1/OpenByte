@@ -12,7 +12,7 @@ import styles from "../app/page.module.css";
 
 const navigation = [
   { label: "Our programs", href: "#programs" },
-  { label: "Our story", href: "#team" },
+  { label: "Meet the team", href: "#team" },
   { label: "Get in touch", href: "#contact" },
 ];
 
@@ -109,8 +109,8 @@ export function HomeHero({ children, footer }: { children?: React.ReactNode; foo
         <section className={styles.hero} aria-labelledby="hero-title" data-hero-scene>
           <picture className={styles.photograph} ref={photoRef}>
             <source media="(max-width: 640px)" type="image/webp"
-              srcSet="/media/openbyte-workshops/workshop-hero-mobile.webp" />
-            <img src="/media/openbyte-workshops/workshop-hero.webp"
+              srcSet="/media/openbyte-workshops/workshop-mentoring.webp" />
+            <img src="/media/openbyte-workshops/workshop-mentoring-wide.webp"
               width={1280} height={720} fetchPriority="high" loading="eager" decoding="async"
               alt="Students collaborating on Arduino electronics projects during an OpenByte workshop" data-hero-depth />
           </picture>

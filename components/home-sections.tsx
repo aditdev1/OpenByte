@@ -33,12 +33,8 @@ const ROBEKS_POST = "https://www.canva.com/design/DAHZzstU38Y/SwgYxNDxCYcTTIwcrS
 
 const ROOM: { name: string; caption: string; alt: string; src?: string }[] = [
   { name: "room-website", caption: "Made by students.", alt: "Students demonstrating an interactive website they built" },
-  { name: "workshop-mentoring", src: "/media/openbyte-workshops/workshop-mentoring.webp", caption: "Working through an Arduino circuit together.", alt: "Two OpenByte workshop participants working together on an Arduino circuit" },
-  { name: "workshop-classroom", src: "/media/openbyte-workshops/workshop-classroom.webp", caption: "Hands-on electronics learning at an OpenByte workshop.", alt: "OpenByte workshop students collaborating around tables of laptops and Arduino kits" },
   { name: "room-workshop", caption: "One of our early coding workshops, photographed during Demo Day.", alt: "Real participants and student instructors at an OpenByte coding workshop" },
   { name: "workshop-arduino-build", src: "/media/openbyte-workshops/workshop-arduino-build.webp", caption: "Connecting components and testing a circuit.", alt: "Student connecting wires on a breadboard beside an Arduino board" },
-  { name: "workshop-group", src: "/media/openbyte-workshops/workshop-group.webp", caption: "Collaborating on an electronics project.", alt: "A group of students working together on an electronics project" },
-  { name: "workshop-overview", src: "/media/openbyte-workshops/workshop-overview.webp", caption: "Learning and building with Arduino kits.", alt: "Students using electronics kits and laptops during an OpenByte class" },
   { name: "workshop-coding", src: "/media/openbyte-workshops/workshop-coding.webp", caption: "Programming an Arduino in the IDE.", alt: "Student coding an Arduino project on a laptop at an electronics workshop" },
   { name: "room-recognition", caption: "A little recognition goes a long way.", alt: "Students receiving recognition after their presentations" },
   { name: "room-demo-day", caption: "Our team presenting at a student coding Demo Day.", alt: "OpenByte team members and volunteers presenting together at a coding Demo Day" },
@@ -247,7 +243,7 @@ export function HomeSections() {
 
       {/* ---------- Class feature band (Radiating Hope) ---------- */}
       <section id="arduino" className={s.feature} aria-labelledby="class-title" data-grow>
-        <Band src="/media/openbyte-workshops/workshop-mentoring-wide.webp" mobileSrc="/media/openbyte-workshops/workshop-mentoring.webp" alt="OpenByte students working together to build an Arduino circuit" />
+        <Band src="/media/student-project-1200.webp" mobileSrc="/media/student-project-800.webp" alt="Students presenting their website on a classroom screen" />
         <div className={s.featureShade} aria-hidden="true" />
         <div className={s.featureInner}>
           <Circuitry className={s.featureMark} size={64} weight="duotone" aria-hidden="true" />
@@ -314,6 +310,7 @@ export function HomeSections() {
       {/* ---------- Team: scroll-lit story (Radiating Hope) ---------- */}
       <section id="team" className={s.section} aria-label="Our team">
         <div className={s.story}>
+          <h2>Meet the team</h2>
           <p className={s.storyBig} data-scrub>
             <ScrubWords text="We’re Adithya, Abdullah, and Bodha, three students at Stone Bridge High School. We started OpenByte after noticing how many people wanted to learn technology but didn’t always have someone nearby who could help." />
           </p>
@@ -323,16 +320,17 @@ export function HomeSections() {
             way to get people interested was to give them something they could
             actually learn or build.
           </p>
-          <ul className={s.founders} aria-label="OpenByte co-founders" data-reveal-group>
+          <ul className={s.founders} aria-label="OpenByte team members" data-reveal-group>
             <li data-reveal-item><strong>Adithya Kandasamy</strong><span>Co-founder</span></li>
             <li data-reveal-item><strong>Abdullah Ahamed</strong><span>Co-founder</span></li>
             <li data-reveal-item><strong>Bodha Achi</strong><span>Co-founder</span></li>
+            <li data-reveal-item><strong>Aarush Katam</strong><span>Officer &amp; instructor</span></li>
           </ul>
           <a className={s.press} href={TRIBUNE_URL} {...external} data-reveal>
             <img src="/media/home/team-founders-560.webp" width={560} height={700} loading="lazy" decoding="async"
               alt="The three OpenByte co-founders standing by their technology education display with laptop and electronics kit" />
             <span className={s.pressText}>
-              <span className={s.caption}>Featured in the Bulldog Tribune</span>
+              <span className={s.caption}>Our three co-founders · Bulldog Tribune</span>
               <strong>OpenByte Opens Technological Pathways</strong>
               <span className={s.pressMeta}>By Saadya Bojja · October 9, 2026</span>
             </span>
