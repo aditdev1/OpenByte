@@ -350,7 +350,7 @@ export function HomeSections() {
               <div>
                 <strong>Aarush Katam</strong>
                 <span>Officer &amp; instructor</span>
-                <p>Aarush helps students explore what they can build by teaching electronics and programming in OpenByte workshops.</p>
+                <p>Aarush joined OpenByte to make a positive impact in his community by helping students learn practical skills in electronics and programming.</p>
               </div>
             </li>
           </ul>
