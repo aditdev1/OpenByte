@@ -133,7 +133,7 @@ export function HomeHero({ children, footer }: { children?: React.ReactNode; foo
                 <a className={styles.primaryButton} href="/classes/" data-motion-link>
                   Explore our classes <ArrowUpRight size={20} aria-hidden="true" />
                 </a>
-                <a className={styles.eventLink} href="#hacks">OpenByte Hacks</a>
+                <a className={styles.eventLink} href="#progress">Our impact</a>
               </div>
             </div>
             <a className={styles.teamLink} href="#team">

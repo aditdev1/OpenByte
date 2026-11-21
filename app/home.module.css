@@ -2236,13 +2236,12 @@
 .impactBand .mapFrame { width: 100%; }
 .impactBand .progressNum { font-size: clamp(54px, 6vw, 90px); margin-bottom: 16px; }
 .impactBand .progressList > li { padding-block: 32px; }
-.hacks { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px,5vw,80px); align-items: center; padding: clamp(24px,4vw,60px); margin-block: 32px 0; border-radius: 20px; background: var(--h-sky-tint); }
-.hacksCopy .h2 { margin-block: 12px 16px; }
-.hacksCopy .lead { margin-top: 0; color: var(--h-ink-2); }
-.hacksStatus { max-width: 48ch; color: var(--h-muted); margin-block: 14px 20px; line-height: 1.5; }
-.hacksPhoto { margin: 0; }
-.hacksPhoto img { width: 100%; height: auto; border-radius: 12px; }
-.hacksPhoto figcaption { margin-top: 8px; font-size: .875rem; color: var(--h-muted); }
+.workshopStory { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px,5vw,80px); align-items: center; padding: clamp(24px,4vw,60px); margin-block: 32px 0; border-radius: 20px; background: var(--h-sky-tint); }
+.workshopStory .h2 { margin-block: 12px 16px; }
+.workshopStory .lead { margin: 0 0 18px; color: var(--h-ink-2); }
+.workshopStory figure { margin: 0; }
+.workshopStory img { width: 100%; max-height: 400px; object-fit: cover; object-position: center 45%; border-radius: 12px; }
+.workshopStory figcaption { margin-top: 8px; font-size: .875rem; color: var(--h-muted); }
 @media (max-width: 900px) {
   .impactBand .mapHead { padding-inline: 24px; }
   .impactBand .mapPin span { display: none; }
@@ -2253,5 +2252,8 @@
   .impactBand .mapHead .h2 { font-size: 30px; }
   .impactBand .progressList > li { text-align: left; padding-block: 20px; }
   .impactBand .progressList p { margin-left: 0; }
-  .hacks { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+  .workshopStory { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
 }
+
+.impactBand .progressList > li:nth-child(2) .progressNum { font-size: clamp(32px, 4vw, 64px); }
+.impactBand .progressList a { color: inherit; text-decoration: underline; }
