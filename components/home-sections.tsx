@@ -143,9 +143,9 @@ export function HomeSections() {
         <div className={s.figuresInner}>
           <ul className={s.progressList} data-reveal-group>
             <li data-reveal-item>
-              <span className={s.progressNum}>≈15</span>
-              <h3>Students taught at our first workshop</h3>
-              <p>On July 7, Brambleton Builders Lab students explored responsible AI and website development with OpenByte.</p>
+              <span className={s.progressNum}>17</span>
+              <h3>Unique students with verified attendance</h3>
+              <p>At least 17 students attended the summer coding program led by Brambleton Builders Lab, where OpenByte helped teach. Each student is counted once across sessions. Fall Arduino attendance is still being verified.</p>
             </li>
             <li data-reveal-item>
               <span className={s.progressNum}>$2,295.19</span>
