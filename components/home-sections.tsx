@@ -143,9 +143,9 @@ export function HomeSections() {
         <div className={s.figuresInner}>
           <ul className={s.progressList} data-reveal-group>
             <li data-reveal-item>
-              <span className={s.progressNum}>17</span>
-              <h3>Unique students with verified attendance</h3>
-              <p>At least 17 students attended the summer coding program led by Brambleton Builders Lab, where OpenByte helped teach. Each student is counted once across sessions. Fall Arduino attendance is still being verified.</p>
+              <span className={s.progressNum}>40+</span>
+              <h3>Students Taught</h3>
+              <p>OpenByte estimates that 40–50 individual students have attended across our programs. That estimate includes 17 students whose attendance was independently verified through Brambleton Builders Lab records.</p>
             </li>
             <li data-reveal-item>
               <span className={s.progressNum}>$2,295.19</span>
