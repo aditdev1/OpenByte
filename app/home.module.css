@@ -892,9 +892,14 @@
   list-style: none;
 }
 
+.founders img { width: 72px; height: 72px; border-radius: 50%; }
+.founders li > div { display: grid; gap: 5px; text-align: left; }
+
 .founders li {
   display: grid;
-  gap: 6px;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
   padding-top: 16px;
   border-top: 1px solid var(--h-ink);
 }
@@ -1683,7 +1688,7 @@
   .rail { grid-auto-columns: 74%; margin-right: -36px; padding-right: 36px; }
   .railHead { flex-direction: column; align-items: flex-start; }
   .founders { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .founders li { grid-template-columns: auto auto; justify-content: center; align-items: baseline; column-gap: 12px; padding-block: 14px; border-top-color: var(--h-rule); }
+  .founders li { column-gap: 16px; padding-block: 14px; border-top-color: var(--h-rule); }
   .founders li:first-child { border-top-color: var(--h-ink); }
   .press { grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding-right: 48px; }
   .press img { width: 72px; height: 90px; }
