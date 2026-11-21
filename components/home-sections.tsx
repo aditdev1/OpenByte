@@ -323,19 +323,35 @@ export function HomeSections() {
           <ul className={s.founders} aria-label="OpenByte team members" data-reveal-group>
             <li data-reveal-item>
               <img src="/media/team/adithya.webp" width={72} height={72} loading="lazy" alt="" />
-              <div><strong>Adithya Kandasamy</strong><span>Co-founder</span></div>
+              <div>
+                <strong>Adithya Kandasamy</strong>
+                <span>Co-founder &amp; co-president</span>
+                <p>Adithya coordinates workshops with families and schools and helps write Arduino and coding lessons.</p>
+              </div>
             </li>
             <li data-reveal-item>
               <img src="/media/team/abdullah.webp" width={72} height={72} loading="lazy" alt="" />
-              <div><strong>Abdullah Ahamed</strong><span>Co-founder</span></div>
+              <div>
+                <strong>Abdullah Ahamed</strong>
+                <span>Co-founder &amp; co-president</span>
+                <p>Abdullah works with local businesses on sponsorships and with schools to find space for classes.</p>
+              </div>
             </li>
             <li data-reveal-item>
               <img src="/media/team/bodha.webp" width={72} height={72} loading="lazy" alt="" />
-              <div><strong>Bodha Achi</strong><span>Co-founder</span></div>
+              <div>
+                <strong>Bodha Achi</strong>
+                <span>Co-founder &amp; co-president</span>
+                <p>Bodha plans and teaches hands-on Arduino labs where students build circuits and write code.</p>
+              </div>
             </li>
             <li data-reveal-item>
               <img src="/media/team/aarush.webp" width={72} height={72} loading="lazy" alt="" />
-              <div><strong>Aarush Katam</strong><span>Officer &amp; instructor</span></div>
+              <div>
+                <strong>Aarush Katam</strong>
+                <span>Officer &amp; instructor</span>
+                <p>Aarush prepares workshop activities and helps students learn electronics and programming.</p>
+              </div>
             </li>
           </ul>
           <a className={s.press} href={TRIBUNE_URL} {...external} data-reveal>
