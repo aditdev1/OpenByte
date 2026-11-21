@@ -7,17 +7,22 @@
 coding demo, student presenters, and the founders photo featured in the Bulldog
 Tribune). They are used only where the page describes OpenByte's own activity.
 
-## Illustrative photography (Wikimedia Commons)
+## Current program photography
 
-These photos do not depict OpenByte projects, people, or events. They illustrate
-program themes and are credited on the page footer as their licenses require.
-Cropped and resized for the web; the crops are shared under the same license.
+The live program explorer now uses authentic OpenByte imagery:
+- Coding/electronics: `openbyte-workshops/workshop-arduino-build.webp`
+- Digital help: `openbyte-workshops/workshop-mentoring.webp` (shows student mentoring, not a senior-help event)
+- Device drives: `openbyte-founders-bulldog-tribune.webp` (shows outreach equipment, not a completed device donation)
+
+## Unused legacy Wikimedia Commons assets
+
+Other Wikimedia Commons photos below were included in an earlier design but
+are not rendered on the current homepage. The active program explorer no longer
+uses third-party photography. They remain documented here for their original licenses.
 
 | Files | Source | Author | License |
 | --- | --- | --- | --- |
 | `program-kids-*` | https://commons.wikimedia.org/wiki/File:Arduino_semaforo_no-breadboard.jpg | Mattruffoni | CC BY-SA 4.0 |
-| `program-help-*` | https://commons.wikimedia.org/wiki/File:Man_with_smartphone_and_laptop_(Unsplash).jpg | Alejandro Escamilla | CC0 |
-| `program-devices-*` | https://commons.wikimedia.org/wiki/File:Apple_MacBookPros_13-15-17_stacked_08-2009.jpg | Benjamin.nagel | CC BY-SA 3.0 |
 | `band-class-*` | https://commons.wikimedia.org/wiki/File:Breadboard_with_4008B.jpg | Eeppeliteloop | CC BY-SA 3.0 |
 | `band-donate-*` | https://commons.wikimedia.org/wiki/File:RGB_LED_mounted_over_a_breadboard.jpg | Viferico | CC BY-SA 4.0 |
 | `band-contact-*` | https://commons.wikimedia.org/wiki/File:Laptop_and_books_(Unsplash).jpg | Kari Shea | CC0 |
