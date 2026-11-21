@@ -660,11 +660,9 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
         <summary>Photo credits</summary>
         <p>
           OpenByte workshop and Demo Day photos show our students and programs.
-          Illustrative photos used for older-adult technology help and device reuse come from Wikimedia Commons:{" "}
-          <a href="https://commons.wikimedia.org/wiki/File:Man_with_smartphone_and_laptop_(Unsplash).jpg" {...external}>Alejandro Escamilla</a> (CC0) and{" "}
-          <a href="https://commons.wikimedia.org/wiki/File:Apple_MacBookPros_13-15-17_stacked_08-2009.jpg" {...external}>Benjamin.nagel</a>{" "}
-          (<a href="https://creativecommons.org/licenses/by-sa/3.0/" {...external}>CC BY-SA 3.0</a>).
-          These illustrative photos do not depict OpenByte events.
+          The homepage uses photos from OpenByte workshops, projects, and community outreach.
+          Photos in the program section show our team and teaching approach; they do not
+          represent a completed senior-tech-help session or a device handoff.
           Map outlines: U.S. Census Bureau state boundaries (public domain).
         </p>
       </details>
