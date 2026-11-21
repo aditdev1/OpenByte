@@ -904,6 +904,8 @@
   border-top: 1px solid var(--h-ink);
 }
 
+.founders li p { margin: 3px 0 0; font-size: 15px; line-height: 1.5; }
+
 .founders strong {
   color: var(--h-ink);
   font-size: 18px;
