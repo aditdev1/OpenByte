@@ -314,42 +314,49 @@ export function HomeSections() {
             <ScrubWords text="We’re Adithya, Abdullah, and Bodha, three students at Stone Bridge High School. We started OpenByte after noticing how many people wanted to learn technology but didn’t always have someone nearby who could help." />
           </p>
           <p className={s.storySmall} data-reveal>
-            Our first outreach events didn&apos;t go as planned. Not many people
-            showed up, even after we handed out flyers. We learned that the best
-            way to get people interested was to give them something they could
-            actually learn or build.
+            We saw how unequal access to devices, digital skills, and patient support
+            could leave people behind. We founded OpenByte to help bridge that divide:
+            making technology easier to learn, safer to use, and more accessible
+            to students, older adults, and families in our community.
+          </p>
+          <p className={s.storySmall} data-reveal>
+            Our first outreach events did not go as planned. Few people showed up
+            even after we handed out flyers. That experience shaped our approach:
+            rather than just talk about technology, we wanted to create welcoming,
+            hands-on opportunities where people could learn a skill, ask questions,
+            and build something themselves.
           </p>
           <ul className={s.founders} aria-label="OpenByte team members" data-reveal-group>
             <li data-reveal-item>
-              <img src="/media/team/adithya.webp" width={72} height={72} loading="lazy" alt="" />
+              <img src="/media/team/adithya.webp" width={148} height={148} loading="lazy" decoding="async" alt="" />
               <div>
                 <strong>Adithya Kandasamy</strong>
                 <span>Co-founder &amp; co-president</span>
-                <p>Adithya saw that some older adults were unsure how to stay safe online. He helped start OpenByte to give them a place to ask questions and get practical help.</p>
+                <p>Adithya helped start OpenByte after noticing that some older adults struggled to feel confident using technology and staying safe online. He wanted people to have a welcoming place to ask questions without judgment, learn practical digital skills, and understand how to protect themselves online. For him, closing the digital divide means helping neighbors feel capable and independent with the tools they use every day.</p>
               </div>
             </li>
             <li data-reveal-item>
-              <img src="/media/team/abdullah.webp" width={72} height={72} loading="lazy" alt="" />
+              <img src="/media/team/abdullah.webp" width={148} height={148} loading="lazy" decoding="async" alt="" />
               <div>
                 <strong>Abdullah Ahamed</strong>
                 <span>Co-founder &amp; co-president</span>
-                <p>Abdullah wanted to close the gap in access to technology in his community. He brought Adithya and Bodha together to start OpenByte.</p>
+                <p>Abdullah saw that not everyone in the community had the same access to technology or the support needed to use it effectively. He brought Adithya and Bodha together to start OpenByte with the goal of making those opportunities more accessible. He believes that connecting people with resources, guidance, and hands-on learning can help more students and families participate confidently in a digital world.</p>
               </div>
             </li>
             <li data-reveal-item>
-              <img src="/media/team/bodha.webp" width={72} height={72} loading="lazy" alt="" />
+              <img src="/media/team/bodha.webp" width={148} height={148} loading="lazy" decoding="async" alt="" />
               <div>
                 <strong>Bodha Achi</strong>
                 <span>Co-founder &amp; co-president</span>
-                <p>Bodha saw that many students had yet to discover what they could build with a computer. He helped start OpenByte so they could try those ideas for themselves.</p>
+                <p>Bodha helped start OpenByte because he wanted more students to discover that technology is something they can create with, not just consume. He saw hands-on coding and electronics as a way for beginners to turn curiosity into real projects. His goal is to give students the encouragement and practical experience to explore ideas, solve problems, and see what they are capable of building.</p>
               </div>
             </li>
             <li data-reveal-item>
-              <img src="/media/team/aarush.webp" width={72} height={72} loading="lazy" alt="" />
+              <img src="/media/team/aarush.webp" width={148} height={148} loading="lazy" decoding="async" alt="" />
               <div>
                 <strong>Aarush Katam</strong>
                 <span>Officer &amp; instructor</span>
-                <p>Aarush joined OpenByte to make a positive impact in his community by helping students learn practical skills in electronics and programming.</p>
+                <p>Aarush joined OpenByte to make a positive impact in his community by helping others learn valuable technology skills. He wanted to contribute to an organization where students could gain confidence through practical, approachable instruction. As an officer and instructor, he helps learners understand electronics and programming by working through hands-on activities and projects together.</p>
               </div>
             </li>
           </ul>
