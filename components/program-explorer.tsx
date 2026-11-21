@@ -20,8 +20,8 @@ const PROGRAMS = [
     tags: "Phone basics / online forms / video calls / scam spotting",
     href: "#contact",
     cta: "Ask for help",
-    image: "program-help",
-    alt: "Hands holding a smartphone in front of an open laptop",
+    image: "/media/openbyte-workshops/workshop-mentoring.webp",
+    alt: "Two OpenByte workshop participants working together with a laptop and electronics",
   },
   {
     title: "Community device drives",
@@ -29,8 +29,8 @@ const PROGRAMS = [
     tags: "Device drop-offs / local drives / volunteer help",
     href: "#drives",
     cta: "Give a device",
-    image: "program-devices",
-    alt: "Three closed laptops stacked on a table",
+    image: "/media/openbyte-founders-bulldog-tribune.webp",
+    alt: "OpenByte founders at a community outreach display with a laptop and educational electronics kit",
   },
 ];
 
