@@ -892,32 +892,48 @@
   list-style: none;
 }
 
-.founders img { width: 72px; height: 72px; border-radius: 50%; }
-.founders li > div { display: grid; gap: 5px; text-align: left; }
+.founders img {
+  display: block;
+  width: 148px;
+  height: 148px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center 28%;
+  background: var(--h-surface);
+}
+.founders li > div { display: grid; gap: 7px; text-align: left; min-width: 0; }
 
 .founders li {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  align-items: center;
-  gap: 15px;
-  padding-top: 16px;
-  border-top: 1px solid var(--h-ink);
+  grid-template-columns: 148px minmax(0, 1fr);
+  align-items: start;
+  gap: 26px;
+  padding-block: 26px;
+  border-top: 1px solid var(--h-rule);
 }
 
-.founders li p { margin: 3px 0 0; font-size: 15px; line-height: 1.5; }
+.founders li:first-child { border-top-color: var(--h-ink); }
+
+.founders li p {
+  max-width: 68ch;
+  margin: 8px 0 0;
+  color: var(--h-ink-2);
+  font-size: 16px;
+  line-height: 1.65;
+}
 
 .founders strong {
   color: var(--h-ink);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: 21px;
+  font-weight: 550;
+  letter-spacing: -0.025em;
 }
 
 .founders span {
   color: var(--h-muted);
   font-family: var(--h-mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
+  font-size: 12px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -1690,7 +1706,14 @@
   .rail { grid-auto-columns: 74%; margin-right: -36px; padding-right: 36px; }
   .railHead { flex-direction: column; align-items: flex-start; }
   .founders { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .founders li { column-gap: 16px; padding-block: 14px; border-top-color: var(--h-rule); }
+  .founders li {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 16px;
+    padding-block: 24px;
+    border-top-color: var(--h-rule);
+  }
+  .founders img { width: 120px; height: 120px; }
+  .founders li p { font-size: 15px; line-height: 1.65; }
   .founders li:first-child { border-top-color: var(--h-ink); }
   .press { grid-template-columns: 72px minmax(0, 1fr); gap: 16px; padding-right: 48px; }
   .press img { width: 72px; height: 90px; }
