@@ -321,10 +321,22 @@ export function HomeSections() {
             actually learn or build.
           </p>
           <ul className={s.founders} aria-label="OpenByte team members" data-reveal-group>
-            <li data-reveal-item><strong>Adithya Kandasamy</strong><span>Co-founder</span></li>
-            <li data-reveal-item><strong>Abdullah Ahamed</strong><span>Co-founder</span></li>
-            <li data-reveal-item><strong>Bodha Achi</strong><span>Co-founder</span></li>
-            <li data-reveal-item><strong>Aarush Katam</strong><span>Officer &amp; instructor</span></li>
+            <li data-reveal-item>
+              <img src="/media/team/adithya.webp" width={72} height={72} loading="lazy" alt="" />
+              <div><strong>Adithya Kandasamy</strong><span>Co-founder</span></div>
+            </li>
+            <li data-reveal-item>
+              <img src="/media/team/abdullah.webp" width={72} height={72} loading="lazy" alt="" />
+              <div><strong>Abdullah Ahamed</strong><span>Co-founder</span></div>
+            </li>
+            <li data-reveal-item>
+              <img src="/media/team/bodha.webp" width={72} height={72} loading="lazy" alt="" />
+              <div><strong>Bodha Achi</strong><span>Co-founder</span></div>
+            </li>
+            <li data-reveal-item>
+              <img src="/media/team/aarush.webp" width={72} height={72} loading="lazy" alt="" />
+              <div><strong>Aarush Katam</strong><span>Officer &amp; instructor</span></div>
+            </li>
           </ul>
           <a className={s.press} href={TRIBUNE_URL} {...external} data-reveal>
             <img src="/media/home/team-founders-560.webp" width={560} height={700} loading="lazy" decoding="async"
