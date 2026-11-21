@@ -326,7 +326,7 @@ export function HomeSections() {
               <div>
                 <strong>Adithya Kandasamy</strong>
                 <span>Co-founder &amp; co-president</span>
-                <p>Adithya coordinates workshops with families and schools and helps write Arduino and coding lessons.</p>
+                <p>Adithya saw that some older adults were unsure how to stay safe online. He helped start OpenByte to give them a place to ask questions and get practical help.</p>
               </div>
             </li>
             <li data-reveal-item>
@@ -334,7 +334,7 @@ export function HomeSections() {
               <div>
                 <strong>Abdullah Ahamed</strong>
                 <span>Co-founder &amp; co-president</span>
-                <p>Abdullah works with local businesses on sponsorships and with schools to find space for classes.</p>
+                <p>Abdullah wanted to close the gap in access to technology in his community. He brought Adithya and Bodha together to start OpenByte.</p>
               </div>
             </li>
             <li data-reveal-item>
@@ -342,7 +342,7 @@ export function HomeSections() {
               <div>
                 <strong>Bodha Achi</strong>
                 <span>Co-founder &amp; co-president</span>
-                <p>Bodha plans and teaches hands-on Arduino labs where students build circuits and write code.</p>
+                <p>Bodha saw that many students had yet to discover what they could build with a computer. He helped start OpenByte so they could try those ideas for themselves.</p>
               </div>
             </li>
             <li data-reveal-item>
@@ -350,7 +350,7 @@ export function HomeSections() {
               <div>
                 <strong>Aarush Katam</strong>
                 <span>Officer &amp; instructor</span>
-                <p>Aarush prepares workshop activities and helps students learn electronics and programming.</p>
+                <p>Aarush helps students explore what they can build by teaching electronics and programming in OpenByte workshops.</p>
               </div>
             </li>
           </ul>
