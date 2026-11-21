@@ -114,10 +114,10 @@ export function HomeSections() {
           <div className={s.mapHead}>
             <p className={s.caption} data-reveal>Fall 2026 · November update</p>
             <h2 id="progress-title" className={s.h2} data-split>
-              <Split text="Our fall Arduino program." />
+              <Split text="What our community has built." />
             </h2>
             <a className={s.textLink} href="/classes/#lesson-circuits" data-reveal>
-              Explore the class <ArrowRight size={18} aria-hidden="true" />
+              Explore our classes <ArrowRight size={18} aria-hidden="true" />
             </a>
           </div>
           <div className={s.mapFrame} aria-hidden="true">
@@ -143,35 +143,34 @@ export function HomeSections() {
         <div className={s.figuresInner}>
           <ul className={s.progressList} data-reveal-group>
             <li data-reveal-item>
-              <span className={s.progressNum} data-count="17">17</span>
-              <h3>Student registrations</h3>
-              <p>Students signed up for our fall beginner Arduino and electronics program.</p>
+              <span className={s.progressNum}>≈15</span>
+              <h3>Students taught at our first workshop</h3>
+              <p>On July 7, Brambleton Builders Lab students explored responsible AI and website development with OpenByte.</p>
             </li>
             <li data-reveal-item>
-              <span className={s.progressNum} data-count="6">6</span>
-              <h3>Lessons in the curriculum</h3>
-              <p>From lighting a first LED to building a reaction-time game with a push button.</p>
+              <span className={s.progressNum}>$2,295.19</span>
+              <h3>Raised toward our $5,000 goal</h3>
+              <p>23 confirmed gifts as of November 20. <a href="/donate/">See live fundraising progress</a>.</p>
             </li>
             <li data-reveal-item>
-              <span className={s.progressNum} data-count="3">3</span>
-              <h3>Robotics kits shipped</h3>
-              <p>Adeept shipped ESP32 smart-car kits to support our electronics program.</p>
+              <span className={s.progressNum}>4</span>
+              <h3>Featured community partners</h3>
+              <p>Brambleton Builders Lab partnered on instruction. Adeept, Ashburn Art Classes, and Robeks of Loudoun contributed kits or funding.</p>
             </li>
           </ul>
         </div>
       </section>
 
-      <section id="hacks" className={s.hacks} aria-labelledby="hacks-title">
-        <div className={s.hacksCopy}>
-          <p className={s.caption}>In planning · January 2027</p>
-          <h2 id="hacks-title" className={s.h2}>OpenByte Hacks</h2>
-          <p className={s.lead}>We’re planning a free, one-day hackathon for students in grades 7–12. The idea is to build a project with a team, then show how it works in a short pitch.</p>
-          <p className={s.hacksStatus}>We’ll share the date, venue, and registration details once school approval is in place.</p>
-          <a className={s.textLink} href="mailto:team@openbyte-np.org?subject=OpenByte%20Hacks%20updates">Ask about OpenByte Hacks <ArrowRight size={18} aria-hidden="true" /></a>
+      <section className={s.workshopStory} aria-labelledby="fall-workshops-title">
+        <div>
+          <p className={s.caption}>Inside the fall workshops</p>
+          <h2 id="fall-workshops-title" className={s.h2}>From a first circuit to a four-note piano.</h2>
+          <p className={s.lead}>17 students registered for our six-session Arduino program. The fall lab guides paired wiring with code: students could measure distance with an ultrasonic sensor, turn buttons into piano keys, and time a reaction.</p>
+          <a className={s.textLink} href="/classes/#projects">Explore the Arduino projects <ArrowRight size={18} aria-hidden="true" /></a>
         </div>
-        <figure className={s.hacksPhoto}>
-          <img src="/media/demo-day-team.webp" width={1800} height={1350} loading="lazy" alt="OpenByte presenters at the podium during a student Demo Day" />
-          <figcaption>Our team presenting at an earlier Demo Day.</figcaption>
+        <figure>
+          <img src="/media/openbyte-workshops/workshop-arduino-build.webp" width={640} height={853} loading="lazy" alt="A student wiring an Arduino circuit beside an open electronics kit" />
+          <figcaption>At the workbench during an OpenByte Arduino class.</figcaption>
         </figure>
       </section>
 
@@ -266,7 +265,7 @@ export function HomeSections() {
         <dl className={s.featureSpec} data-reveal>
           <div><dt>Who</dt><dd>Grades 6–9</dd></div>
           <div><dt>Fall 2026 fee</dt><dd>$100, including a take-home starter kit</dd></div>
-          <div><dt>Format</dt><dd>Online instruction and hands-on kit projects</dd></div>
+          <div><dt>Format</dt><dd>In-person and online lessons with hands-on kit projects</dd></div>
         </dl>
       </section>
 
@@ -621,7 +620,6 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
               <li><a href={`${homePath}#programs`}>Programs</a></li>
               <li><a href="/classes/">Arduino classes</a></li>
               <li><a href={`${homePath}#progress`}>Progress</a></li>
-              <li><a href={`${homePath}#hacks`}>OpenByte Hacks</a></li>
               <li><a href={`${homePath}#drives`}>Device drives</a></li>
             </ul>
           </div>
