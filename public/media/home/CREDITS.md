@@ -2,10 +2,17 @@
 
 ## OpenByte photographs (own material)
 
-`chip-*`, `room-*` and `team-founders-*` are crops of OpenByte's existing photos in
-`public/media/` (student project, recognition moment, workshop room, Demo Day team,
-coding demo, student presenters, and the founders photo featured in the Bulldog
-Tribune). They are used only where the page describes OpenByte's own activity.
+`chip-website-*`, `chip-help-*`, `room-*`, and `team-founders-*` are crops
+of OpenByte's existing photographs in `public/media/` (student project,
+recognition moment, workshop room, Demo Day team, coding demo, student
+presenters, and the founders photo featured in the Bulldog Tribune).
+
+The homepage's Arduino class feature now displays original fall workshop
+photography: `openbyte-workshops/workshop-overview-wide.webp` on wider screens
+and `openbyte-workshops/workshop-overview.webp` on phones. The inline circuit
+thumbnail uses `openbyte-workshops/workshop-mentoring-wide.webp`, showing students
+working on a real circuit. The older `chip-circuit-200.webp` and
+`chip-circuit-400.webp` macro crops are no longer shown on the website.
 
 ## Current program photography
 
