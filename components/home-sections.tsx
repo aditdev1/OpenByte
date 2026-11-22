@@ -70,13 +70,13 @@ function ScrubWords({ text }: { text: string }) {
   );
 }
 
-function Chip({ name, alt }: { name: string; alt: string }) {
+function Chip({ name, alt, src }: { name: string; alt: string; src?: string }) {
   return (
     <img
       className={s.chip}
       data-chip
-      src={`/media/home/${name}-200.webp`}
-      srcSet={`/media/home/${name}-200.webp 200w, /media/home/${name}-400.webp 400w`}
+      src={src ?? `/media/home/${name}-200.webp`}
+      srcSet={src ? undefined : `/media/home/${name}-200.webp 200w, /media/home/${name}-400.webp 400w`}
       sizes="(max-width: 640px) 64px, 120px"
       width={200}
       height={120}
@@ -182,7 +182,7 @@ export function HomeSections() {
               <ScrubWords text="A first website." />
               <Chip name="chip-website" alt="Students presenting a website they built, with its code projected beside it" />{" "}
               <ScrubWords text="A working LED circuit." />
-              <Chip name="chip-circuit" alt="Close-up of an Arduino circuit board" />{" "}
+              <Chip name="chip-circuit" src="/media/openbyte-workshops/workshop-mentoring-wide.webp" alt="OpenByte students connecting a circuit during an Arduino workshop" />{" "}
               <ScrubWords text="Figuring out how to use a phone or laptop." />
               <Chip name="chip-help" alt="Participants seated at tables during an OpenByte workshop" />{" "}
               <span className={s.statementQuiet}>
@@ -242,7 +242,7 @@ export function HomeSections() {
 
       {/* ---------- Class feature band (Radiating Hope) ---------- */}
       <section id="arduino" className={s.feature} aria-labelledby="class-title" data-grow>
-        <Band src="/media/student-project-1200.webp" mobileSrc="/media/student-project-800.webp" alt="Students presenting their website on a classroom screen" />
+        <Band src="/media/openbyte-workshops/workshop-overview-wide.webp" mobileSrc="/media/openbyte-workshops/workshop-overview.webp" alt="OpenByte students working with Arduino kits, laptops, and circuit components at a workshop" />
         <div className={s.featureShade} aria-hidden="true" />
         <div className={s.featureInner}>
           <Circuitry className={s.featureMark} size={64} weight="duotone" aria-hidden="true" />
