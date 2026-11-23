@@ -659,11 +659,14 @@ export function HomeFooter({ homePath = "" }: { homePath?: string }) {
       <details id="photo-credits" className={s.credits}>
         <summary>Photo credits</summary>
         <p>
-          OpenByte workshop and Demo Day photos show our students and programs.
-          The homepage uses photos from OpenByte workshops, projects, and community outreach.
-          Photos in the program section show our team and teaching approach; they do not
-          represent a completed senior-tech-help session or a device handoff.
-          Map outlines: U.S. Census Bureau state boundaries (public domain).
+          Unless otherwise noted, photographs featured on this website were taken during
+          OpenByte workshops, educational programs, and community activities. These images
+          document our programs and participants. Some photographs illustrate our general
+          teaching approach and do not represent completed senior technology assistance
+          sessions or device donations.
+        </p>
+        <p>
+          Map outlines are based on U.S. Census Bureau state boundaries (public domain).
         </p>
       </details>
     </footer>
